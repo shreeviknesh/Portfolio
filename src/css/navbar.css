@@ -1,0 +1,43 @@
+nav {
+    background: var(--bg-secondary);
+    width: 100%;
+    height: var(--navbar-height);
+
+    position: absolute;
+    top: 0;
+    
+    padding: 0;
+}
+
+.header-nav {
+    padding: 0 3rem;
+    margin: 0;
+    height: 100%;
+    
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-nav > li a {
+    padding: 0;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav-link {
+    margin-right: 3rem;
+}
+
+.nav-title {
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+    }
+}
