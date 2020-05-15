@@ -1,43 +1,102 @@
-nav {
-    background: var(--bg-secondary);
-    width: 100%;
-    height: var(--navbar-height);
-
-    position: absolute;
-    top: 0;
-    
+/* CSS for the navbar */
+.header > * {
     padding: 0;
-}
-
-.header-nav {
-    padding: 0 3rem;
     margin: 0;
-    height: 100%;
-    
-    list-style: none;
+    letter-spacing: 0.1rem;
+}
 
+.header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-}
-
-.header-nav > li a {
-    padding: 0;
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-.nav-link {
-    margin-right: 3rem;
+    min-height: var(--navbar-height);
+    background-color: var(--bg-secondary);
 }
 
 .nav-title {
-    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
     font-size: 1.1rem;
 }
 
+.nav-links {
+    display: flex;
+    width: 27.5%;
+    min-width: 17rem;
+    justify-content: space-around;   
+}
+
+.nav-links li, a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-primary);
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger div {
+    height: 0.22rem;
+    margin-top: 0.22rem;
+    width: 1.5rem;
+    background: var(--color-primary);
+    transition: all 0.5s ease;
+}
+
 @media screen and (max-width: 768px) {
-    .header-nav {
-        flex-direction: column;
+    body {
+        overflow-x: hidden;
     }
+    .nav-links {
+        position: absolute;
+        top: var(--navbar-height);
+        right: 0;
+
+        height: calc(100vh - var(--navbar-height));
+        min-width: 50%;
+        
+        flex-direction: column;
+        background-color: var(--bg-secondary);
+        justify-content: space-evenly;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-links-active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hamburger-active .hamburger-line1 {
+    transform: rotate(-45deg) translate(-0.3rem, 0.33rem);
+}
+
+.hamburger-active .hamburger-line2 {
+    opacity: 0;
+}
+
+.hamburger-active .hamburger-line3 {
+    transform: rotate(+45deg) translate(-0.3rem, -0.33rem);
 }
