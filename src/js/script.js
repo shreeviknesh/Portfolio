@@ -15,6 +15,13 @@ const navSlide = () => {
         });
         hamburger.classList.toggle('hamburger-active');
     });
+
+    // Fixes https://github.com/shreeviknesh/Portfolio/issues/1
+    navLinks.forEach(navLink => {
+        navLink.addEventListener('click', () => {
+            hamburger.click();
+        });
+    });
 };
 
 navSlide();
