@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Shreeviknesh Sankaran</title>
+
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/sections.css">
 </head>
 <body>
     <!-- Responsive Navbar -->
@@ -24,14 +27,27 @@
     </nav>
 
     <main>
-        <section id="intro">Introduction</section>
-        <section id="about">About</section>
-        <section id="projects">Projects</section>
-        <section id="contact">Contact</section>
+        <section id="intro">
+            Introduction
+            <img src="public/img/arrow.svg" alt="Down Arrow" class="down-arrow" data-goto="#about">
+        </section>
+        <section id="about">
+            About
+            <img src="public/img/arrow.svg" alt="Down Arrow" class="down-arrow" data-goto="#projects">
+        </section>
+        <section id="projects">
+            Projects
+            <img src="public/img/arrow.svg" alt="Down Arrow" class="down-arrow" data-goto="#contact">
+        </section>
+        <section id="contact">
+            Contact
+        </section>
     </main>
 
+    <!-- Make height of footer as the navbar height and make final sections's height as (100vh - navar-height) -->
     <footer></footer>
 
+    <!-- Custom Scripts -->
     <script src="public/js/script.js"></script>
 </body>
 </html>

@@ -4,18 +4,21 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 
+    /* Scroll will be smooth */
+    scroll-behavior: smooth;
+
+    /* Custom Variables */
     --navbar-height: 8vh;
 
     --bg-primary: #fdfdfd;
     --bg-secondary: #a5e9e1;
-
-    --color-primary: #e8ffe8;
-    --color-secondary: #291f71;
-
     --bg-intro: #ff847c;
     --bg-about: #cabbe9;
     --bg-projects: #ffcef3;
     --bg-contact: #a1eafb;
+
+    --color-primary: #e8ffe8;
+    --color-secondary: #291f71;
 }
 
 body {
@@ -29,40 +32,15 @@ main * {
     color: var(--color-primary);
 }
 
-main section {
-    height: 100vh;
-
-    /* Placeholders */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-}
-
-#intro {
-    height: calc(100vh - var(--navbar-height)) !important;
-    background-color: var(--bg-intro);
-}
-
-#about {
-    background-color: var(--bg-about);
-}
-
-#projects {
-    background-color: var(--bg-projects);
-}
-
-#contact {
-    background-color: var(--bg-contact);
-}
-
 /* Custom scrollbar */
 body::-webkit-scrollbar {
-    /* width: 0.8em; */
-    width: 0; /* No scrollbar */
+    width: 0.5em;
+    /* No scrollbar */
+    /* width: 0;  */
 }
 
 body::-webkit-scrollbar-track {
+    background-color: var(--bg-primary);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 

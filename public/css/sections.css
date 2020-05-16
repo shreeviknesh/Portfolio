@@ -1,0 +1,38 @@
+main section {
+    height: 100vh;
+    position: relative;
+
+    /* Placeholders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.down-arrow {
+    font-size: 1.6em;
+}
+
+.down-arrow {
+    width: 0.7em;
+    position: absolute;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+#intro {
+    height: calc(100vh - var(--navbar-height)) !important;
+    background-color: var(--bg-intro);
+}
+
+#about {
+    background-color: var(--bg-about);
+}
+
+#projects {
+    background-color: var(--bg-projects);
+}
+
+#contact {
+    background-color: var(--bg-contact);
+}

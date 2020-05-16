@@ -24,4 +24,30 @@ const navSlide = () => {
     });
 };
 
-navSlide();
+// Page has to go back to the beginning on reload
+// Source: https://stackoverflow.com/a/13824103
+const goToStartOnReload = () => {
+    window.location.replace("#");
+    if (typeof window.history.replaceState == 'function') {
+        history.replaceState({}, '', window.location.href.slice(0, -1));
+    }
+}
+
+// Go to the next section on clicking the arrow
+const arrowGoto = () => {
+    const arrows = document.querySelectorAll('.down-arrow');
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', event => {
+            event.preventDefault();
+            let target = arrow.getAttribute('data-goto');
+            window.location = target;
+        });
+    });
+}
+
+// Invoking all the defined functions
+(() => {
+    navSlide();
+    goToStartOnReload();
+    arrowGoto();
+})();
