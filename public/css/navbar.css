@@ -27,6 +27,9 @@
     width: 27.5%;
     min-width: 17rem;
     justify-content: space-around;
+    
+    /* Fixes https://github.com/shreeviknesh/Portfolio/issues/2 */
+    z-index: 100;
 }
 
 .nav-links li, a {
