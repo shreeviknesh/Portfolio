@@ -6,35 +6,60 @@
 
     --navbar-height: 8vh;
 
-    --bg-primary: #fff4e3;
-    --bg-secondary: #ffcdab;
+    --bg-primary: #fdfdfd;
+    --bg-secondary: #a5e9e1;
 
-    --color-primary: #3d3d3a;
-    --color-secondary: #070606;
+    --color-primary: #e8ffe8;
+    --color-secondary: #291f71;
+
+    --bg-intro: #ff847c;
+    --bg-about: #cabbe9;
+    --bg-projects: #ffcef3;
+    --bg-contact: #a1eafb;
 }
 
 body {
     padding: 0;
     margin: 0;
     background: var(--bg-primary);
-    color: var(--color-primary);
 }
 
-main {
+main * {
     text-align: center;
+    color: var(--color-primary);
 }
 
 main section {
     height: 100vh;
+
+    /* Placeholders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
 }
 
-main section:first-child {
+#intro {
     height: calc(100vh - var(--navbar-height)) !important;
+    background-color: var(--bg-intro);
+}
+
+#about {
+    background-color: var(--bg-about);
+}
+
+#projects {
+    background-color: var(--bg-projects);
+}
+
+#contact {
+    background-color: var(--bg-contact);
 }
 
 /* Custom scrollbar */
 body::-webkit-scrollbar {
-    width: 0.8em; 
+    /* width: 0.8em; */
+    width: 0; /* No scrollbar */
 }
 
 body::-webkit-scrollbar-track {

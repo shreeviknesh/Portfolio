@@ -10,7 +10,7 @@ const navSlide = () => {
             if (navLink.style.animation) {
                 navLink.style.animation = "";
             } else {
-                navLink.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                navLink.style.animation = `navLinkFade 0.5s cubic-bezier(0.2, 0.68, 0.5, 1.71) forwards ${index / 7 + 0.5}s`;
             }
         });
         hamburger.classList.toggle('hamburger-active');

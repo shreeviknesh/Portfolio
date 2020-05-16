@@ -1,8 +1,9 @@
 /* CSS for the navbar */
-.header > * {
+.header * {
     padding: 0;
     margin: 0;
     letter-spacing: 0.1rem;
+    color: var(--color-secondary);
 }
 
 .header {
@@ -16,21 +17,21 @@
 .nav-title {
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1rem;
     font-size: 1.1rem;
+    animation: titleLoad 1.4s cubic-bezier(.57, .21, .69, 5.25);
 }
 
 .nav-links {
     display: flex;
     width: 27.5%;
     min-width: 17rem;
-    justify-content: space-around;   
+    justify-content: space-around;
 }
 
 .nav-links li, a {
     text-decoration: none;
     list-style: none;
-    color: var(--color-primary);
 }
 
 .hamburger {
@@ -41,10 +42,18 @@
     height: 0.22rem;
     margin-top: 0.22rem;
     width: 1.5rem;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     transition: all 0.5s ease;
 }
 
+/* Large Screens */
+@media screen and (min-width: 768px) {
+    .nav-links {
+        animation: navLinkLoad 1.4s cubic-bezier(0.2, 0.68, 0.5, 2);
+    }
+}
+
+/* Small/Mobile Screens */
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -86,6 +95,28 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes titleLoad {
+    from {
+        opacity: 0;
+        transform: translate(-1em, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes navLinkLoad {
+    from {
+        opacity: 0;
+        transform: translate(3em, -2em);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
     }
 }
 
