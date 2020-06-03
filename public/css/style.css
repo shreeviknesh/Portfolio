@@ -1,50 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 
-    /* Scroll will be smooth */
-    scroll-behavior: smooth;
+  /* Scroll will be smooth */
+  scroll-behavior: smooth;
 
-    /* Custom Variables */
-    --navbar-height: 8vh;
+  /* Custom Variables */
+  --navbar-height: 8vh;
 
-    --bg-primary: #fdfdfd;
-    --bg-secondary: #a5e9e1;
-    --bg-intro: #ff847c;
-    --bg-about: #cabbe9;
-    --bg-projects: #ffcef3;
-    --bg-contact: #a1eafb;
+  --bg-primary: #fdfdfd;
+  --bg-secondary: #a5e9e1;
+  --bg-intro: #ff847c;
+  --bg-about: #cabbe9;
+  --bg-projects: #ffcef3;
+  --bg-contact: #a1eafb;
 
-    --color-primary: #e8ffe8;
-    --color-secondary: #291f71;
+  --color-primary: #e8ffe8;
+  --color-secondary: #291f71;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background: var(--bg-primary);
+  padding: 0;
+  margin: 0;
+  background: var(--bg-primary);
 }
 
 main * {
-    text-align: center;
-    color: var(--color-primary);
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.intro-image {
+  object-fit: cover;
+  object-position: 90% 0;
+
+  min-width: 20vh;
+  min-height: 20vh;
+
+  width: 20vw;
+  height: 20vw;
+
+  border-radius: 50%;
 }
 
 /* Custom scrollbar */
 body::-webkit-scrollbar {
-    width: 0.5em;
-    /* No scrollbar */
-    /* width: 0;  */
+  width: 0.5em;
+  /* No scrollbar */
+  /* width: 0;  */
 }
 
 body::-webkit-scrollbar-track {
-    background-color: var(--bg-primary);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-primary);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #3d3d3a;
-    outline: 1px solid slategrey;
+  background-color: #3d3d3a;
+  outline: 1px solid slategrey;
 }
